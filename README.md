@@ -1,3 +1,5 @@
-# make_donation
+# finding_heroes
 
-Essa aplicação tem intuito de unir pessoas que querem fazer a diferença e ajudar pessoas ou ONG's. 
+Finding Heroes
+
+![alt text](https://github.com/kikepola/FindingHeroes/blob/master/assets/images/persons.png?raw=true)
