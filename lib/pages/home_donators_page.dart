@@ -27,6 +27,7 @@ class _HomeDonatorsPageState extends State<HomeDonatorsPage> {
               expandedHeight: 500.0,
               floating: true,
               pinned: false,
+              automaticallyImplyLeading: false,
               backgroundColor:  Color.fromARGB(255, 215, 245, 248),
               flexibleSpace: FlexibleSpaceBar(
                   background: Hero(
@@ -41,38 +42,26 @@ class _HomeDonatorsPageState extends State<HomeDonatorsPage> {
                       child: Column(
                         children: <Widget>[
                           Container(
-                            padding: EdgeInsets.all(10),
+                            padding: EdgeInsets.all(20),
                             alignment: Alignment.centerRight,
                             color: Colors.transparent,
-                            height: 100,
-                            child: DropdownButton(
-                              icon: Icon(
-                                Icons.view_headline, 
-                                color: Colors.white,
-                              ),
-                              items: [
-                                DropdownMenuItem(child: Container(child: Row(
-                                  children: <Widget>[
-                                    Icon(Icons.exit_to_app),
-                                    SizedBox(width: 8),
-                                    Text("Sair")
-                                  ],
-                                ),
-                              ),
-                              value: 'Sair',
-                            )
-                            ],onChanged: (itemIdentifier){
-                              if(itemIdentifier == 'Sair'){
+                            height: 120,
+                            child: GestureDetector(
+                              onTap: (){
                                 FirebaseAuth.instance.signOut();
                                 Navigator.push(
-                                  context, 
-                                  MaterialPageRoute(builder: (builder) => LoginPage())
+                                    context,
+                                    MaterialPageRoute(builder: (builder) => LoginPage())
                                 );
-                              }
-                            },),
+                              },
+                              child: Icon(
+                                Icons.exit_to_app,
+                                color: Colors.white,
+                              ),
+                            ),
                           )
                         ],
-                      ),                              
+                      ),
                     ),
                   )
                 ),
@@ -86,7 +75,7 @@ class _HomeDonatorsPageState extends State<HomeDonatorsPage> {
               createContentArea()
             ],
           ),
-        )      
+        )
     );
   }
 

@@ -11,8 +11,9 @@ import 'package:keyboard_avoider/keyboard_avoider.dart';
 
 class HomeReciversPage extends StatefulWidget {
   final String user_name;
+  final String uid;
 
-  const HomeReciversPage(this.user_name);
+  const HomeReciversPage(this.user_name, this.uid);
   @override
   _HomeReciversPageState createState() => _HomeReciversPageState();
 }
@@ -34,47 +35,44 @@ class _HomeReciversPageState extends State<HomeReciversPage> {
           Expanded(
             flex: 2,
             child: Container(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('assets/images/logo.png'),
-                  fit: BoxFit.contain,
-                ),
-              ),
               child: Column(
                 children: <Widget>[
-                  Container(
-                    padding: EdgeInsets.all(10),
-                    alignment: Alignment.centerRight,
-                    color: Colors.transparent,
-                    height: 80,
-                    child: DropdownButton(
-                      icon: Icon(
-                        Icons.view_headline, 
-                        color: Colors.white,
-                      ),
-                      items: [
-                        DropdownMenuItem(child: Container(child: Row(
-                          children: <Widget>[
-                            Icon(Icons.exit_to_app),
-                            SizedBox(width: 8),
-                            Text("Sair")
-                          ],
+                  Expanded(
+                    flex: 2,
+                    child: Container(
+                      child: Container(
+                        padding: EdgeInsets.fromLTRB(0, 40, 20, 10),
+                        alignment: Alignment.bottomRight,
+                        color: Colors.transparent,
+                        height: 150,
+                        child: GestureDetector(
+                          onTap: (){
+                            FirebaseAuth.instance.signOut();
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (builder) => LoginPage())
+                            );
+                          },
+                          child: Icon(
+                            Icons.exit_to_app,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
-                      value: 'Sair',
-                    )
-                    ],onChanged: (itemIdentifier){
-                      if(itemIdentifier == 'Sair'){
-                        FirebaseAuth.instance.signOut();
-                        Navigator.push(
-                          context, 
-                          MaterialPageRoute(builder: (builder) => LoginPage())
-                        );
-                      }
-                    },),
-                  )
+                    ),
+                  ),
+                  Expanded(
+                    flex: 3,
+                    child: Container(
+                      child: Image(
+                        image: AssetImage("assets/images/logo.png"),
+                        width: 270,
+                      ),
+                      
+                    ),
+                  ),
                 ],
-              ),                              
+              ),
             ),
           ),
           Expanded(
@@ -89,7 +87,9 @@ class _HomeReciversPageState extends State<HomeReciversPage> {
               ),
               padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
               child: StreamBuilder(
-                stream: Firestore.instance.collection('donations').snapshots(),
+                stream: Firestore.instance.collection('donations')
+                .where('uid', isEqualTo: widget.uid )
+                .snapshots(),
                 builder: (context, snapshot){
                   if(snapshot.connectionState == ConnectionState.waiting){
                     return Center(child: CircularProgressIndicator());
@@ -203,10 +203,5 @@ class _HomeReciversPageState extends State<HomeReciversPage> {
   }
 }
 
-getUserId() async {
-  FirebaseAuth _auth = FirebaseAuth.instance;
-  FirebaseUser user = await _auth.currentUser();
-  return  user.uid;
-}
 
  

@@ -213,7 +213,7 @@ class _LoginPageState extends State<LoginPage> with SingleTickerProviderStateMix
          if(value.data.values.toList()[0] == 1){
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (builder) => HomeReciversPage(value.data.values.toList()[1]))
+            MaterialPageRoute(builder: (builder) => HomeReciversPage(value.data.values.toList()[1], _autResult.user.uid))
           );
          }else{
            Navigator.push(

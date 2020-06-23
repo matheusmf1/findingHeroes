@@ -233,7 +233,8 @@ class _NewProjectWidgetState extends State<NewProjectWidget> {
         'description': project_detail_controller.text,
         'email': project_email_controller.text,
         'phone': project_phone_controller.text,
-        'donation_type': selected_value
+        'donation_type': selected_value,
+        'uid':user.uid
       });   
 
       msg = 'Projeto cadastrado com sucesso';
