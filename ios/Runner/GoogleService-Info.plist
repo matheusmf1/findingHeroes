@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>396365132224-qcremdssojitst4bn589c15e48hmmtcl.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.396365132224-qcremdssojitst4bn589c15e48hmmtcl</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAE3HdCM0xjKPblMYUQ8H5AGeNZc-z5Ugs</string>
+	<key>GCM_SENDER_ID</key>
+	<string>396365132224</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.poladian.findingHeroes</string>
+	<key>PROJECT_ID</key>
+	<string>newagent-fac08</string>
+	<key>STORAGE_BUCKET</key>
+	<string>newagent-fac08.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:396365132224:ios:16ca74e0b1164975d21825</string>
+	<key>DATABASE_URL</key>
+	<string>https://newagent-fac08.firebaseio.com</string>
+</dict>
+</plist>
