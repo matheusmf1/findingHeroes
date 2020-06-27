@@ -87,7 +87,7 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
               _createPasswordFormField(),
               _createUsrTypeRadioArea(),
               Container(
-                height: MediaQuery.of(context).size.height - 680,
+                margin: const EdgeInsets.fromLTRB(0, 40, 0, 0),
                 child: Align(
                   alignment: Alignment.bottomRight,
                   child: Container(

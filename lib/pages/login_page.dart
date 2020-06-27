@@ -77,7 +77,7 @@ class _LoginPageState extends State<LoginPage> with SingleTickerProviderStateMix
             child: _createLoginButtons(),
           ),
           Expanded(
-            flex: 3,
+            flex: 2,
             child: Container(
               margin: const EdgeInsets.fromLTRB(0, 50, 0, 0),
               child: Image(        
