@@ -209,7 +209,7 @@ class _DonationDetailPageState extends State<DonationDetailPage> {
 
  _createDonationArea() {
   
-    if ( widget._donation_type == "Livros" ) {
+    if ( widget._donation_type == "Dinheiro" ) {
 
       return MercadoPagoDonation();
 
