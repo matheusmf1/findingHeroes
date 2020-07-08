@@ -1,7 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:finding_heroes/pages/home_donators_page.dart';
-import 'package:finding_heroes/pages/home_recivers_page.dart';
-import 'package:finding_heroes/pages/login_page.dart';
 import 'package:finding_heroes/pages/page_indicator.dart';
 import 'package:finding_heroes/pages/splashscreen_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';

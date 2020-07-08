@@ -1,4 +1,4 @@
-package com.poladian.finding_heroes
+package br.com.argrolabs.finding_heroes
 
 import android.app.Activity
 import android.content.Intent

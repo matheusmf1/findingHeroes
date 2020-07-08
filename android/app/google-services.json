@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "396365132224",
+    "firebase_url": "https://newagent-fac08.firebaseio.com",
+    "project_id": "newagent-fac08",
+    "storage_bucket": "newagent-fac08.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:396365132224:android:f499735a052d7285d21825",
+        "android_client_info": {
+          "package_name": "br.com.argrolabs.finding_heroes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "396365132224-afqeqmfpkg8netja3jel1sq9q9pecetc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMCZ9e6hVUIAp_MrdLTcdcLI8ZXIBFZvk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "396365132224-afqeqmfpkg8netja3jel1sq9q9pecetc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
